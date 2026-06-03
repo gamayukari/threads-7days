@@ -547,7 +547,7 @@ strong {
 
 .days-heading {
   aspect-ratio: 864 / 220;
-  background-image: url("assets/days-heading.jpg");
+  background-image: url("days-heading.jpg"), url("assets/days.png");
   background-position: center;
   box-shadow: none;
 }
