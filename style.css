@@ -538,16 +538,17 @@ strong {
 
 .day-slice {
   width: 100%;
-  background-image: url("assets/days.png");
+  background-image: none;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   border-radius: 18px;
   box-shadow: 0 14px 32px rgba(244, 47, 131, 0.08);
 }
 
 .days-heading {
   aspect-ratio: 864 / 220;
-  background-position: center 0%;
+  background-image: url("assets/days-heading.jpg");
+  background-position: center;
   box-shadow: none;
 }
 
