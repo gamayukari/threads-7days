@@ -536,60 +536,17 @@ strong {
   gap: 18px;
 }
 
-.day-slice {
-  width: 100%;
-  background-image: none;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 18px;
-  box-shadow: 0 14px 32px rgba(244, 47, 131, 0.08);
-}
-
-.days-heading {
-  aspect-ratio: 864 / 220;
-  background-image: url("days-heading.jpg"), url("assets/days.png");
-  background-position: center;
-  box-shadow: none;
-}
-
-.day-01 {
-  aspect-ratio: 864 / 248;
-  background-position: center 13.1%;
-}
-
-.day-02 {
-  aspect-ratio: 864 / 256;
-  background-position: center 27.4%;
-}
-
-.day-03 {
-  aspect-ratio: 864 / 256;
-  background-position: center 42.1%;
-}
-
-.day-04 {
-  aspect-ratio: 864 / 256;
-  background-position: center 56.9%;
-}
-
-.day-05 {
-  aspect-ratio: 864 / 256;
-  background-position: center 71.6%;
-}
-
-.day-06 {
-  aspect-ratio: 864 / 256;
-  background-position: center 86.4%;
-}
-
-.day-07 {
-  aspect-ratio: 864 / 231;
-  background-position: center 100%;
-}
-
+.days-heading-img,
 .day-card-img {
   width: 100%;
   height: auto;
+}
+
+.days-heading-img {
+  border-radius: 0;
+}
+
+.day-card-img {
   border-radius: 22px;
   box-shadow: 0 14px 32px rgba(244, 47, 131, 0.08);
 }
