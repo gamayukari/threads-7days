@@ -1343,6 +1343,16 @@ strong {
     font-size: 13px;
   }
 
+  .not-list li {
+    padding: 16px 16px 16px 56px;
+  }
+
+  .not-list li::before {
+    top: 18px;
+    left: 18px;
+    margin-right: 0;
+  }
+
   .card-grid,
   .recommend-grid {
     gap: 12px;
