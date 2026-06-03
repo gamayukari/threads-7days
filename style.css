@@ -23,6 +23,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -32,6 +33,7 @@ body {
   font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
   font-size: 17px;
   line-height: 1.9;
+  overflow-x: hidden;
 }
 
 img {
@@ -90,6 +92,7 @@ a {
 .hero img {
   width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 .section {
@@ -1076,7 +1079,6 @@ strong {
   align-items: center;
   justify-content: center;
   width: min(100%, 620px);
-  min-height: 300px;
   margin: 0 auto 36px;
   color: rgba(8, 38, 83, 0.58);
   font-weight: 900;
@@ -1095,9 +1097,8 @@ strong {
 
 .final-photo img {
   width: 100%;
-  height: 100%;
-  min-height: 300px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -1161,21 +1162,25 @@ strong {
 
 @media (max-width: 640px) {
   body {
-    font-size: 16px;
+    font-size: 15.5px;
+    line-height: 1.85;
   }
 
   .site-header {
-    padding: 10px 16px;
+    gap: 10px;
+    padding: 9px 12px;
   }
 
   .header-logo {
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.25;
   }
 
   .header-cta {
-    min-height: 42px;
-    padding: 8px 16px;
-    font-size: 14px;
+    min-height: 40px;
+    padding: 8px 13px;
+    font-size: 13px;
+    white-space: nowrap;
   }
 
   .container,
@@ -1184,26 +1189,184 @@ strong {
   }
 
   .section {
-    padding: 56px 0;
+    padding: 48px 0;
   }
 
   .hero img {
-    min-height: 420px;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    object-fit: contain;
     object-position: center top;
   }
 
   h1,
   h2 {
+    margin-bottom: 22px;
+    font-size: clamp(25px, 7vw, 31px);
+    line-height: 1.42;
+  }
+
+  h3 {
+    font-size: 21px;
+    line-height: 1.45;
+  }
+
+  p {
+    margin-bottom: 15px;
+  }
+
+  .lead,
+  .message,
+  .plain-closing,
+  .plain-note {
+    margin-top: 22px;
+  }
+
+  .plain-closing {
+    font-size: 17px;
+    line-height: 1.9;
+    text-align: left;
+  }
+
+  .plain-closing br {
+    display: none;
+  }
+
+  .check-list {
+    gap: 12px;
+  }
+
+  .check-list p,
+  .card,
+  .recommend-grid div {
+    min-height: auto;
+    padding: 18px 16px 18px 52px;
+    line-height: 1.65;
+    border-radius: 18px;
+  }
+
+  .check-list p::before,
+  .card::before,
+  .recommend-grid div::before {
+    left: 16px;
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
+  }
+
+  .flow {
+    margin: 30px 0;
+  }
+
+  .flow div {
+    width: min(178px, 62vw);
+    height: min(178px, 62vw);
+    font-size: 19px;
+  }
+
+  .flow div span {
     font-size: 30px;
   }
 
+  .simple-list li,
+  .benefit-list li,
+  .not-list li {
+    padding: 14px 15px;
+    line-height: 1.65;
+  }
+
+  .simple-list li::before,
+  .benefit-list li::before,
+  .not-list li::before {
+    width: 26px;
+    height: 26px;
+    margin-right: 9px;
+    font-size: 13px;
+  }
+
+  .card-grid,
+  .recommend-grid {
+    gap: 12px;
+  }
+
+  .days-image,
+  .bonus-image {
+    width: calc(100% + 12px);
+    margin-left: -6px;
+    margin-right: -6px;
+  }
+
+  .days-image img,
+  .bonus-image img,
+  .opchat-photo img,
+  .final-photo img {
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
+
+  .days-image img,
+  .bonus-image img {
+    border-radius: 14px;
+  }
+
   .board-list {
-    padding: 34px 18px 26px;
+    margin-top: 26px;
+    padding: 30px 16px 22px;
+    border-radius: 18px;
   }
 
   .board-list li {
-    font-size: 17px;
+    padding: 11px 0 11px 37px;
+    font-size: 16.5px;
+    line-height: 1.55;
+  }
+
+  .board-list li::before {
+    top: 12px;
+    width: 25px;
+    height: 25px;
+    font-size: 13px;
+  }
+
+  .note-box,
+  .point-box,
+  .bonus-text,
+  .price-box {
+    padding: 24px 18px;
+    border-radius: 20px;
+  }
+
+  .bonus-text h3 {
+    font-size: clamp(30px, 10vw, 42px);
+  }
+
+  .bonus-lead {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: left;
+  }
+
+  .bonus-points {
+    gap: 10px;
+  }
+
+  .opchat-photo {
+    width: calc(100% + 4px);
+    margin-left: -2px;
+    margin-right: -2px;
+    padding: 5px;
+    border-radius: 18px;
+  }
+
+  .community p {
+    text-align: left;
+  }
+
+  .point-box p {
+    font-size: 18px;
+    line-height: 1.7;
   }
 
   .steps div {
@@ -1227,11 +1390,69 @@ strong {
   .info-list div {
     grid-template-columns: 1fr;
     gap: 4px;
-    padding: 16px 0 16px 34px;
+    padding: 15px 0 15px 34px;
   }
 
   .info-list dt,
   .info-list dd {
     padding: 0;
+  }
+
+  .info-panel {
+    border-radius: 18px;
+  }
+
+  .info-panel-head {
+    padding: 28px 18px;
+  }
+
+  .info-panel-head strong {
+    font-size: clamp(54px, 17vw, 72px);
+  }
+
+  .info-panel-head span {
+    font-size: 19px;
+  }
+
+  .info-list {
+    padding: 24px 18px 28px;
+  }
+
+  .price-heading-img {
+    width: min(100%, 360px);
+    border-radius: 10px;
+  }
+
+  .price-main {
+    font-size: clamp(54px, 16vw, 72px);
+  }
+
+  .big-cta {
+    min-height: 56px;
+    padding: 12px 18px;
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .final-section {
+    padding-top: 52px;
+  }
+
+  .final-section h2 {
+    font-size: clamp(26px, 7vw, 32px);
+  }
+
+  .final-photo {
+    width: calc(100% + 4px);
+    margin-left: -2px;
+    margin-right: -2px;
+    margin-bottom: 28px;
+    border-width: 4px;
+    border-radius: 20px;
+  }
+
+  .final-section .big-cta {
+    min-height: 66px;
+    font-size: 22px;
   }
 }
